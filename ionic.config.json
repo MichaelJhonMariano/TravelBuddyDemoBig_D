@@ -1,0 +1,7 @@
+{
+  "name": "TravelBuddyMapAppDemo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
