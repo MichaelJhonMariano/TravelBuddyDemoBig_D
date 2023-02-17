@@ -1,0 +1,45 @@
+ion-searchbar {
+  z-index: 1;
+}
+
+.search-preview-container {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.search-preview {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-preview:hover {
+  background-color: #eee;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 150ms ease-in;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 150ms ease-in;
+}

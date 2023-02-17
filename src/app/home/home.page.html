@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
       Travel Buddy
     </ion-title>
@@ -7,5 +7,21 @@
 </ion-header>
 
 <ion-content>
- 
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="onSearch()"></ion-searchbar>
+  <div id="map" #map></div>
+  <div id="preview-container" class="search-preview-container">
+    <div *ngFor="let result of searchResults; let i = index"
+         [id]="'preview-' + i"
+         [class.search-preview]="true"
+         [class.selected-preview]="result.selected"
+         (click)="onPreviewClick(result)">
+      {{ result.description }}
+    </div>
+  </div>
+  <ion-list *ngIf="searchResults.length">
+    <ion-item *ngFor="let result of searchResults" (click)="onResultSelected(result)">
+      {{result.description}}
+    </ion-item>
+  </ion-list>
 </ion-content>
+
